@@ -9,6 +9,7 @@ import Blogs from './pages/Blogs';
 import Bookmarks from './pages/Bookmarks';
 import MainLayouts from './layouts/MainLayouts';
 import Home from './pages/Home';
+import Blog from './pages/Blog';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
       {
         path : '/bookmarks',
         element : <Bookmarks></Bookmarks>
+      },
+      {
+        path : 'blog/:id',
+        element : <Blog></Blog>,
+        loader : ({params}) => fetch(`https://dev.to/api/articles/${params.id}`)
       }
     ],
   },

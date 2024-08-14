@@ -3,7 +3,7 @@ import { Link, Outlet, useLoaderData, useNavigation, useParams } from "react-rou
 import Loader from "../Components/Loader/Loader";
 import { TbBookmarkPlus } from "react-icons/tb";
 import { saveBlog } from "../utility/LocalStorage";
-import  { Toaster } from 'react-hot-toast';
+
 
 const Blog = () => {
 
@@ -51,7 +51,7 @@ const Blog = () => {
 						<TbBookmarkPlus size={20} className="text-secondary" />
 					</div>
 				</div>
-				<Toaster />
+			
 				<Outlet></Outlet>
 
 

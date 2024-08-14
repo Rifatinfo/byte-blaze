@@ -1,4 +1,4 @@
-// import { StrictMode } from 'react'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
@@ -8,7 +8,7 @@ import MainLayouts from './layouts/MainLayouts';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 
-
+import  { Toaster } from 'react-hot-toast';
 
 
 import {
@@ -59,8 +59,9 @@ const router = createBrowserRouter([
 
 
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
+  <StrictMode>
    <RouterProvider router={router} />
+   <Toaster />
 
-  // </StrictMode>,
+   </StrictMode>,
 );
